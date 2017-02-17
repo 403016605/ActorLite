@@ -44,8 +44,15 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="CovarianceCrawling.cs" />
+    <Compile Include="Program.cs" />
+    <Compile Include="Crawler.cs" />
+    <Compile Include="ICrawlRequestHandler.cs" />
+    <Compile Include="ICrawlResponseHandler.cs" />
+    <Compile Include="IStatisticRequestHandelr.cs" />
+    <Compile Include="IStatisticResponseHandler.cs" />
+    <Compile Include="Monitor.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="StatisticReportActor.cs" />
   </ItemGroup>
   <ItemGroup>
     <ProjectReference Include="..\ActorLite\ActorLite.csproj">

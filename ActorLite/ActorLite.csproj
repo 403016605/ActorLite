@@ -60,6 +60,7 @@
     <Compile Include="ActorContext.cs" />
     <Compile Include="Dispatcher.cs" />
     <Compile Include="IActor.cs" />
+    <Compile Include="IPort.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <ItemGroup>

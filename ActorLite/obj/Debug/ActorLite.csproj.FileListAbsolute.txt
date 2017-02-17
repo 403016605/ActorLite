@@ -1,0 +1,5 @@
+D:\Source\Repos\ActorLite\ActorLite\bin\Debug\ActorLite.dll
+D:\Source\Repos\ActorLite\ActorLite\bin\Debug\ActorLite.pdb
+D:\Source\Repos\ActorLite\ActorLite\obj\Debug\ActorLite.csprojResolveAssemblyReference.cache
+D:\Source\Repos\ActorLite\ActorLite\obj\Debug\ActorLite.dll
+D:\Source\Repos\ActorLite\ActorLite\obj\Debug\ActorLite.pdb
