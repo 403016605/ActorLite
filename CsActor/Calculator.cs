@@ -15,9 +15,13 @@ namespace CsActor
             _currentValue = newValue;
             _index++;
             if (_index <= _maxValue)
+            {
                 counter.Post(ct => ct.Count(this, _currentValue, _index));
+            }
             else
+            {
                 Console.WriteLine("CurrentTotal: {0}", newValue);
+            }
         }
 
         public void StartCalculate(int maxValue)

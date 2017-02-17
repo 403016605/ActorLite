@@ -10,11 +10,12 @@ namespace ActorLite
         {
             if (actor.Exited) return;
 
-            var status = Interlocked.CompareExchange(ref actor.Context.Status, ActorContext.EXECUTING,
-                ActorContext.WAITING);
+            var status = Interlocked.CompareExchange(ref actor.Context.Status, ActorContext.EXECUTING,ActorContext.WAITING);
 
             if (status == ActorContext.WAITING)
+            {
                 ThreadPool.QueueUserWorkItem(Execute, actor);
+            }
         }
 
         private void Execute(object o)

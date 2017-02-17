@@ -1,11 +1,15 @@
 ﻿
-Microsoft Visual Studio Solution File, Format Version 11.00
-# Visual Studio 2010
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio 14
+VisualStudioVersion = 14.0.25420.1
+MinimumVisualStudioVersion = 10.0.40219.1
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "CovarianceCrawlingExample", "CovarianceCrawling\CovarianceCrawlingExample.csproj", "{BD174F84-9A31-4AAE-ADC3-9032AB3D97A5}"
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ActorLite", "ActorLite\ActorLite.csproj", "{FD4E3124-563E-44B3-AEC4-E44995F5CAE5}"
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "CounterExample", "CsActor\CounterExample.csproj", "{94ACB33D-9D30-431E-9F64-07DC9C86C801}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Sample", "Sample", "{C74903BA-2779-446D-A0DC-934C99E0DE1D}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -50,5 +54,9 @@ Global
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(NestedProjects) = preSolution
+		{BD174F84-9A31-4AAE-ADC3-9032AB3D97A5} = {C74903BA-2779-446D-A0DC-934C99E0DE1D}
+		{94ACB33D-9D30-431E-9F64-07DC9C86C801} = {C74903BA-2779-446D-A0DC-934C99E0DE1D}
 	EndGlobalSection
 EndGlobal

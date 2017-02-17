@@ -6,37 +6,28 @@ namespace ActorLite
     public abstract class Actor<T> : IActor, IPort<T>
         where T : Actor<T>
     {
-        private readonly ActorContext m_context;
-        private readonly Queue<Action<T>> m_messageQueue = new Queue<Action<T>>();
+        private readonly ActorContext _context;
+        private readonly Queue<Action<T>> _messageQueue = new Queue<Action<T>>();
 
-        private bool m_exited;
+        private bool _exited;
 
         protected Actor()
         {
-            m_context = new ActorContext(this);
+            _context = new ActorContext(this);
         }
 
-        ActorContext IActor.Context
-        {
-            get { return m_context; }
-        }
+        ActorContext IActor.Context => _context;
 
-        bool IActor.Exited
-        {
-            get { return m_exited; }
-        }
+        bool IActor.Exited => _exited;
 
-        int IActor.MessageCount
-        {
-            get { return m_messageQueue.Count; }
-        }
+        int IActor.MessageCount => _messageQueue.Count;
 
         void IActor.Execute()
         {
             Action<T> message;
-            lock (m_messageQueue)
+            lock (_messageQueue)
             {
-                message = m_messageQueue.Dequeue();
+                message = _messageQueue.Dequeue();
             }
 
             Receive(message);
@@ -44,11 +35,11 @@ namespace ActorLite
 
         public void Post(Action<T> message)
         {
-            if (m_exited) return;
+            if (_exited) return;
 
-            lock (m_messageQueue)
+            lock (_messageQueue)
             {
-                m_messageQueue.Enqueue(message);
+                _messageQueue.Enqueue(message);
             }
 
             Dispatcher.Instance.ReadyToExecute(this);
@@ -63,7 +54,7 @@ namespace ActorLite
 
         protected void Exit()
         {
-            m_exited = true;
+            _exited = true;
         }
     }
 }
