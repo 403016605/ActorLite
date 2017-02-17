@@ -1,0 +1,8 @@
+D:\Source\Repos\ActorLite\Sample.Calc\bin\Debug\Sample.Calc.exe.config
+D:\Source\Repos\ActorLite\Sample.Calc\bin\Debug\Sample.Calc.exe
+D:\Source\Repos\ActorLite\Sample.Calc\bin\Debug\Sample.Calc.pdb
+D:\Source\Repos\ActorLite\Sample.Calc\bin\Debug\ActorLite.dll
+D:\Source\Repos\ActorLite\Sample.Calc\bin\Debug\ActorLite.pdb
+D:\Source\Repos\ActorLite\Sample.Calc\obj\Debug\Sample.Calc.csprojResolveAssemblyReference.cache
+D:\Source\Repos\ActorLite\Sample.Calc\obj\Debug\Sample.Calc.exe
+D:\Source\Repos\ActorLite\Sample.Calc\obj\Debug\Sample.Calc.pdb

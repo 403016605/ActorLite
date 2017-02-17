@@ -1,0 +1,8 @@
+D:\Source\Repos\ActorLite\Sample.Crawling\bin\Debug\Sample.Crawling.exe.config
+D:\Source\Repos\ActorLite\Sample.Crawling\bin\Debug\Sample.Crawling.exe
+D:\Source\Repos\ActorLite\Sample.Crawling\bin\Debug\Sample.Crawling.pdb
+D:\Source\Repos\ActorLite\Sample.Crawling\bin\Debug\ActorLite.dll
+D:\Source\Repos\ActorLite\Sample.Crawling\bin\Debug\ActorLite.pdb
+D:\Source\Repos\ActorLite\Sample.Crawling\obj\Debug\Sample.Crawling.csprojResolveAssemblyReference.cache
+D:\Source\Repos\ActorLite\Sample.Crawling\obj\Debug\Sample.Crawling.exe
+D:\Source\Repos\ActorLite\Sample.Crawling\obj\Debug\Sample.Crawling.pdb
