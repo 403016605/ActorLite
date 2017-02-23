@@ -7,7 +7,9 @@ namespace Sample.Crawling
     public class Monitor : Actor<Monitor>, ICrawlResponseHandler, IStatisticRequestHandelr
     {
         private readonly HashSet<string> _allUrls;
+
         private readonly Queue<string> _readyToCrawl;
+
         private readonly Dictionary<string, string> _urlContent;
 
         public Monitor(int crawlerCount)
@@ -20,6 +22,7 @@ namespace Sample.Crawling
         }
 
         public int MaxCrawlerCount { get; }
+
         public int WorkingCrawlerCount { private set; get; }
 
         public void Crawl(string url)

@@ -6,8 +6,13 @@ namespace ActorLite
     {
         public static Dispatcher Instance { get; } = new Dispatcher();
 
+        /// <summary>
+        /// 准备执行
+        /// </summary>
+        /// <param name="actor"></param>
         public void ReadyToExecute(IActor actor)
         {
+            //actor状态为退出，则返回。
             if (actor.Exited) return;
 
             var status = Interlocked.CompareExchange(ref actor.Context.Status, ActorContext.EXECUTING,ActorContext.WAITING);

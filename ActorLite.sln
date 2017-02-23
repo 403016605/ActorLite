@@ -11,6 +11,15 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Sample.Calc", "Sample.Calc\
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Sample.Crawling", "Sample.Crawling\Sample.Crawling.csproj", "{0BF1E081-D5BA-4734-B2E2-8390FC56A35C}"
 EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "SeleniumPhantomJS", "SeleniumPhantomJS", "{BBE5341D-0D89-405B-8CDA-7B912512180B}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "SeleniumCrawling", "SeleniumCrawling\SeleniumCrawling.csproj", "{3751C053-49D5-4041-914C-F879B2EA8D81}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Lib", "Lib", "{E36FC00D-C3B7-4221-9EBB-CBD5AF846DAA}"
+	ProjectSection(SolutionItems) = preProject
+		C:\Users\zhaobb\Downloads\phantomjs-2.1.1-windows.zip = C:\Users\zhaobb\Downloads\phantomjs-2.1.1-windows.zip
+	EndProjectSection
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -55,6 +64,18 @@ Global
 		{0BF1E081-D5BA-4734-B2E2-8390FC56A35C}.Release|Mixed Platforms.Build.0 = Release|Any CPU
 		{0BF1E081-D5BA-4734-B2E2-8390FC56A35C}.Release|x86.ActiveCfg = Release|Any CPU
 		{0BF1E081-D5BA-4734-B2E2-8390FC56A35C}.Release|x86.Build.0 = Release|Any CPU
+		{3751C053-49D5-4041-914C-F879B2EA8D81}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{3751C053-49D5-4041-914C-F879B2EA8D81}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{3751C053-49D5-4041-914C-F879B2EA8D81}.Debug|Mixed Platforms.ActiveCfg = Debug|Any CPU
+		{3751C053-49D5-4041-914C-F879B2EA8D81}.Debug|Mixed Platforms.Build.0 = Debug|Any CPU
+		{3751C053-49D5-4041-914C-F879B2EA8D81}.Debug|x86.ActiveCfg = Debug|Any CPU
+		{3751C053-49D5-4041-914C-F879B2EA8D81}.Debug|x86.Build.0 = Debug|Any CPU
+		{3751C053-49D5-4041-914C-F879B2EA8D81}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{3751C053-49D5-4041-914C-F879B2EA8D81}.Release|Any CPU.Build.0 = Release|Any CPU
+		{3751C053-49D5-4041-914C-F879B2EA8D81}.Release|Mixed Platforms.ActiveCfg = Release|Any CPU
+		{3751C053-49D5-4041-914C-F879B2EA8D81}.Release|Mixed Platforms.Build.0 = Release|Any CPU
+		{3751C053-49D5-4041-914C-F879B2EA8D81}.Release|x86.ActiveCfg = Release|Any CPU
+		{3751C053-49D5-4041-914C-F879B2EA8D81}.Release|x86.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
@@ -62,5 +83,6 @@ Global
 	GlobalSection(NestedProjects) = preSolution
 		{0613172C-2E95-4BCF-8370-FAEC54A57C14} = {C74903BA-2779-446D-A0DC-934C99E0DE1D}
 		{0BF1E081-D5BA-4734-B2E2-8390FC56A35C} = {C74903BA-2779-446D-A0DC-934C99E0DE1D}
+		{3751C053-49D5-4041-914C-F879B2EA8D81} = {BBE5341D-0D89-405B-8CDA-7B912512180B}
 	EndGlobalSection
 EndGlobal
