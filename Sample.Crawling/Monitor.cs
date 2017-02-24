@@ -8,16 +8,19 @@ namespace Sample.Crawling
     {
         private readonly HashSet<string> _allUrls;
 
+        private readonly IProcessingUnit _processingUnit;
+
         private readonly Queue<string> _readyToCrawl;
 
         private readonly Dictionary<string, string> _urlContent;
 
-        public Monitor(int crawlerCount)
+        public Monitor(int crawlerCount, IProcessingUnit processingUnit)
         {
             _allUrls = new HashSet<string>();
             _readyToCrawl = new Queue<string>();
             _urlContent = new Dictionary<string, string>();
             MaxCrawlerCount = crawlerCount;
+            _processingUnit = processingUnit;
             WorkingCrawlerCount = 0;
         }
 
@@ -33,7 +36,7 @@ namespace Sample.Crawling
             if (WorkingCrawlerCount < MaxCrawlerCount)
             {
                 WorkingCrawlerCount++;
-                IPort<ICrawlRequestHandler> crawler = new Crawler();
+                IPort<ICrawlRequestHandler> crawler = new Crawler(_processingUnit);
                 crawler.Post(c => c.Crawl(this, url));
             }
             else
@@ -50,11 +53,10 @@ namespace Sample.Crawling
             var url = _readyToCrawl.Dequeue();
             reusableCrawler.Post(c => c.Crawl(this, url));
 
-            while ((_readyToCrawl.Count > 0) &&
-                   (WorkingCrawlerCount < MaxCrawlerCount))
+            while ((_readyToCrawl.Count > 0) && (WorkingCrawlerCount < MaxCrawlerCount))
             {
                 var newUrl = _readyToCrawl.Dequeue();
-                IPort<ICrawlRequestHandler> crawler = new Crawler();
+                IPort<ICrawlRequestHandler> crawler = new Crawler(_processingUnit);
                 var a = new Action<ICrawlRequestHandler>(c => c.Crawl(this, newUrl));
                 crawler.Post(a);
 
