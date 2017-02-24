@@ -4,17 +4,17 @@ namespace LZ.ActorLite.Calc
 {
     public class Counter : Actor<int>
     {
-        private int _value = 0;
+        private int _value;
 
         protected override void Receive(int message)
         {
             if (message == -1)
             {
-                Console.WriteLine(this._value);
-                this.Exit();
+                Console.WriteLine(_value);
+                Exit();
             }
 
-            this._value += message;
+            _value += message;
         }
     }
 }

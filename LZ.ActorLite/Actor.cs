@@ -4,7 +4,8 @@ namespace LZ.ActorLite
 {
     public abstract class Actor<T> : IActor
     {
-        private bool _exited = false;
+        private bool _exited;
+
         private readonly Queue<T> _messageQueue = new Queue<T>();
 
 
@@ -12,41 +13,42 @@ namespace LZ.ActorLite
 
         protected Actor()
         {
-            this._context = new ActorContext(this);
+            _context = new ActorContext(this);
         }
 
-        private readonly ActorContext _context = null;
-        ActorContext IActor.Context => this._context;
+        private readonly ActorContext _context;
 
-        bool IActor.Existed => this._exited;
+        ActorContext IActor.Context => _context;
 
-        int IActor.MessageCount => this._messageQueue.Count;
+        bool IActor.Existed => _exited;
+
+        int IActor.MessageCount => _messageQueue.Count;
 
         void IActor.Execute()
         {
             T message;
-            lock (this._messageQueue)
+            lock (_messageQueue)
             {
-                message = this._messageQueue.Dequeue();
+                message = _messageQueue.Dequeue();
             }
 
-            this.Receive(message);
+            Receive(message);
         }
 
         
 
         protected void Exit()
         {
-            this._exited = true;
+            _exited = true;
         }
 
         public void Post(T message)
         {
-            if (this._exited) return;
+            if (_exited) return;
 
-            lock (this._messageQueue)
+            lock (_messageQueue)
             {
-                this._messageQueue.Enqueue(message);
+                _messageQueue.Enqueue(message);
             }
 
             Dispatcher.Instance.ReadyToExecute(this);

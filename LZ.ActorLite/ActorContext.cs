@@ -8,7 +8,7 @@
 
         public ActorContext(IActor actor)
         {
-            this.Actor = actor;
+            Actor = actor;
         }
 
         public IActor Actor { get; private set; }

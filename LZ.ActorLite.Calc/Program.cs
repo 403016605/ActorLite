@@ -2,12 +2,12 @@
 
 namespace LZ.ActorLite.Calc
 {
-    class Program
+    internal class Program
     {
-        static void Main(string[] args)
+        private static void Main(string[] args)
         {
-            Counter counter = new Counter();
-            for (int i = 0; i < 10000; i++)
+            var counter = new Counter();
+            for (var i = 0; i < 10000; i++)
             {
                 counter.Post(i);
             }

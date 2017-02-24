@@ -14,7 +14,7 @@ namespace LZ.ActorLite
 
             if (status == ActorContext.WAITING)
             {
-                ThreadPool.QueueUserWorkItem(this.Execute, actor);
+                ThreadPool.QueueUserWorkItem(Execute, actor);
             }
         }
 
@@ -33,7 +33,7 @@ namespace LZ.ActorLite
 
                 if (actor.MessageCount > 0)
                 {
-                    this.ReadyToExecute(actor);
+                    ReadyToExecute(actor);
                 }
             }
         }
