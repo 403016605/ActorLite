@@ -8,7 +8,7 @@ namespace LZ.ActorLite
 
         public void ReadyToExecute(IActor actor)
         {
-            if (actor.Existed) return;
+            if (actor.Exited) return;
 
             var status = Interlocked.CompareExchange(ref actor.Context.Status,ActorContext.EXECUTING,ActorContext.WAITING);
 
@@ -23,7 +23,7 @@ namespace LZ.ActorLite
             IActor actor = (IActor)o;
             actor.Execute();
 
-            if (actor.Existed)
+            if (actor.Exited)
             {
                 Thread.VolatileWrite(ref actor.Context.Status,ActorContext.EXITED);
             }

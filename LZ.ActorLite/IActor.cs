@@ -4,7 +4,7 @@
     {
         void Execute();
 
-        bool Existed { get; }
+        bool Exited { get; }
 
         int MessageCount { get; }
 

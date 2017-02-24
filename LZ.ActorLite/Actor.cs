@@ -20,7 +20,7 @@ namespace LZ.ActorLite
 
         ActorContext IActor.Context => _context;
 
-        bool IActor.Existed => _exited;
+        bool IActor.Exited => _exited;
 
         int IActor.MessageCount => _messageQueue.Count;
 
