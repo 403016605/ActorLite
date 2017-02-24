@@ -2,6 +2,9 @@
 
 namespace ActorLite
 {
+    /// <summary>
+    /// Actor分发器
+    /// </summary>
     internal class Dispatcher
     {
         public static Dispatcher Instance { get; } = new Dispatcher();

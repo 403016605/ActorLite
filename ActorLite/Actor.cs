@@ -8,7 +8,6 @@ namespace ActorLite
     {
         private readonly ActorContext _context;
         private readonly Queue<Action<T>> _messageQueue = new Queue<Action<T>>();
-
         private bool _exited;
 
         protected Actor()

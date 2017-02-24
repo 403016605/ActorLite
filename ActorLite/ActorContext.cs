@@ -30,6 +30,9 @@
             Actor = actor;
         }
 
+        /// <summary>
+        /// Actor实例
+        /// </summary>
         public IActor Actor { get; private set; }
     }
 }
