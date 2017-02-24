@@ -1,8 +1,0 @@
-D:\Source\Repos\ActorLite\CovarianceCrawling\bin\Debug\CovarianceCrawling.exe.config
-D:\Source\Repos\ActorLite\CovarianceCrawling\bin\Debug\CovarianceCrawling.exe
-D:\Source\Repos\ActorLite\CovarianceCrawling\bin\Debug\CovarianceCrawling.pdb
-D:\Source\Repos\ActorLite\CovarianceCrawling\bin\Debug\ActorLite.dll
-D:\Source\Repos\ActorLite\CovarianceCrawling\bin\Debug\ActorLite.pdb
-D:\Source\Repos\ActorLite\CovarianceCrawling\obj\x86\Debug\CovarianceCrawlingExample.csprojResolveAssemblyReference.cache
-D:\Source\Repos\ActorLite\CovarianceCrawling\obj\x86\Debug\CovarianceCrawling.exe
-D:\Source\Repos\ActorLite\CovarianceCrawling\obj\x86\Debug\CovarianceCrawling.pdb

@@ -16,6 +16,7 @@ namespace Sample.Calc
             _index++;
             if (_index <= _maxValue)
             {
+                Console.WriteLine("CurrentTotal: {0}", newValue);
                 counter.Post(ct => ct.Count(this, _currentValue, _index));
             }
             else

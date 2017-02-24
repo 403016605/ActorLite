@@ -42,8 +42,6 @@ namespace ActorLite
             }
 
             Dispatcher.Instance.ReadyToExecute(this);
-
-            //message.DynamicInvoke(this);
         }
 
         protected virtual void Receive(Action<T> message)

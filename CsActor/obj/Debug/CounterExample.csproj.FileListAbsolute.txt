@@ -1,8 +1,0 @@
-D:\Source\Repos\ActorLite\CsActor\bin\Debug\CsActor.exe.config
-D:\Source\Repos\ActorLite\CsActor\bin\Debug\CsActor.exe
-D:\Source\Repos\ActorLite\CsActor\bin\Debug\CsActor.pdb
-D:\Source\Repos\ActorLite\CsActor\bin\Debug\ActorLite.dll
-D:\Source\Repos\ActorLite\CsActor\bin\Debug\ActorLite.pdb
-D:\Source\Repos\ActorLite\CsActor\obj\Debug\CounterExample.csprojResolveAssemblyReference.cache
-D:\Source\Repos\ActorLite\CsActor\obj\Debug\CsActor.exe
-D:\Source\Repos\ActorLite\CsActor\obj\Debug\CsActor.pdb
