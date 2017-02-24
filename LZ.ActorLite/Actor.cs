@@ -4,19 +4,17 @@ namespace LZ.ActorLite
 {
     public abstract class Actor<T> : IActor
     {
-        private bool _exited;
-
+        
+        private readonly ActorContext _context;
         private readonly Queue<T> _messageQueue = new Queue<T>();
-
-
-        protected abstract void Receive(T message);
+        private bool _exited;
 
         protected Actor()
         {
             _context = new ActorContext(this);
         }
 
-        private readonly ActorContext _context;
+        #region IActor
 
         ActorContext IActor.Context => _context;
 
@@ -35,7 +33,7 @@ namespace LZ.ActorLite
             Receive(message);
         }
 
-        
+        #endregion
 
         protected void Exit()
         {
@@ -53,5 +51,7 @@ namespace LZ.ActorLite
 
             Dispatcher.Instance.ReadyToExecute(this);
         }
+
+        protected abstract void Receive(T message);
     }
 }

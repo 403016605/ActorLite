@@ -15,6 +15,8 @@ namespace ActorLite
             _context = new ActorContext(this);
         }
 
+        #region IActor
+
         ActorContext IActor.Context => _context;
 
         bool IActor.Exited => _exited;
@@ -32,6 +34,15 @@ namespace ActorLite
             Receive(message);
         }
 
+        #endregion
+
+        protected void Exit()
+        {
+            _exited = true;
+        }
+
+        #region IPort
+
         public void Post(Action<T> message)
         {
             if (_exited) return;
@@ -44,14 +55,13 @@ namespace ActorLite
             Dispatcher.Instance.ReadyToExecute(this);
         }
 
+        #endregion
+
         protected virtual void Receive(Action<T> message)
         {
             message.DynamicInvoke(this);
         }
 
-        protected void Exit()
-        {
-            _exited = true;
-        }
+        
     }
 }
