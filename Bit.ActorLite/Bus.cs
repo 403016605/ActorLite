@@ -20,11 +20,15 @@ namespace Bit.ActorLite
             }
         }
 
-        public void Registe<T>(Action<T> handler) where T : IMessage
+        public void Register<T>(Action<T> handler) where T : IMessage
         {
             List<Action<IMessage>> handlers;
 
-            if (!_route.TryGetValue(typeof(T), out handlers)) return;
+            if (!_route.TryGetValue(typeof(T), out handlers))
+            {
+                handlers = new List<Action<IMessage>>();
+                _route.TryAdd(typeof(T), handlers);
+            }
 
             handlers.Add(h => handler((T)h));
         }

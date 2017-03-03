@@ -4,15 +4,17 @@
   <PropertyGroup>
     <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
     <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
-    <ProjectGuid>{28ABAAC1-E808-4239-9282-EBE52CA0F682}</ProjectGuid>
-    <OutputType>Library</OutputType>
+    <ProjectGuid>{A6D88207-FF32-484C-BE03-E69683769FA9}</ProjectGuid>
+    <OutputType>Exe</OutputType>
     <AppDesignerFolder>Properties</AppDesignerFolder>
-    <RootNamespace>Bit.ActorLite</RootNamespace>
-    <AssemblyName>Bit.ActorLite</AssemblyName>
+    <RootNamespace>Bit.ActorLite.Calc</RootNamespace>
+    <AssemblyName>Bit.ActorLite.Calc</AssemblyName>
     <TargetFrameworkVersion>v4.6.1</TargetFrameworkVersion>
     <FileAlignment>512</FileAlignment>
+    <AutoGenerateBindingRedirects>true</AutoGenerateBindingRedirects>
   </PropertyGroup>
   <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
     <DebugSymbols>true</DebugSymbols>
     <DebugType>full</DebugType>
     <Optimize>false</Optimize>
@@ -22,6 +24,7 @@
     <WarningLevel>4</WarningLevel>
   </PropertyGroup>
   <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
     <DebugType>pdbonly</DebugType>
     <Optimize>true</Optimize>
     <OutputPath>bin\Release\</OutputPath>
@@ -30,10 +33,6 @@
     <WarningLevel>4</WarningLevel>
   </PropertyGroup>
   <ItemGroup>
-    <Reference Include="Autofac, Version=4.4.0.0, Culture=neutral, PublicKeyToken=17863af14b0044da, processorArchitecture=MSIL">
-      <HintPath>..\packages\Autofac.4.4.0\lib\net45\Autofac.dll</HintPath>
-      <Private>True</Private>
-    </Reference>
     <Reference Include="System" />
     <Reference Include="System.Core" />
     <Reference Include="System.Xml.Linq" />
@@ -44,30 +43,19 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="Actor.cs">
-      <DependentUpon>IActor.cs</DependentUpon>
-    </Compile>
-    <Compile Include="ActorContext.cs" />
-    <Compile Include="Bootstrap.cs" />
-    <Compile Include="Bus.cs">
-      <DependentUpon>IBus.cs</DependentUpon>
-    </Compile>
-    <Compile Include="Components\AutofacObjectContainer.cs" />
-    <Compile Include="Components\ComponentAttribute.cs" />
-    <Compile Include="Components\IObjectContainer.cs" />
-    <Compile Include="Components\LifeStyle.cs" />
-    <Compile Include="Components\ObjectContainer.cs" />
-    <Compile Include="Dispatcher.cs" />
-    <Compile Include="Extensions\TypeExtension.cs" />
-    <Compile Include="IActor.cs" />
-    <Compile Include="IBus.cs" />
-    <Compile Include="IHandler.cs" />
-    <Compile Include="IMessage.cs" />
+    <Compile Include="AddNumberHandler.cs" />
+    <Compile Include="AddNumberMessage.cs" />
+    <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
-    <Compile Include="Utils\Singleton.cs" />
   </ItemGroup>
   <ItemGroup>
-    <None Include="packages.config" />
+    <None Include="App.config" />
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\Bit.ActorLite\Bit.ActorLite.csproj">
+      <Project>{28abaac1-e808-4239-9282-ebe52ca0f682}</Project>
+      <Name>Bit.ActorLite</Name>
+    </ProjectReference>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 

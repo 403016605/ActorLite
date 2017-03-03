@@ -1,8 +1,9 @@
 ﻿using System.Collections.Concurrent;
+using Bit.ActorLite.Components;
 
 namespace Bit.ActorLite
 {
-    public abstract class Actor<T> : IActor
+    public class Actor<T> : IActor
         where T:IMessage
     {
         
@@ -10,7 +11,7 @@ namespace Bit.ActorLite
         private readonly ConcurrentQueue<T> _messageQueue = new ConcurrentQueue<T>();
         private bool _exited;
 
-        protected Actor()
+        public Actor()
         {
             _context = new ActorContext(this);
         }
@@ -50,6 +51,12 @@ namespace Bit.ActorLite
             Dispatcher.Instance.ReadyToExecute(this);
         }
 
-        protected abstract void Receive(T message);
+        protected void Receive(T message)
+        {
+            var bus =ObjectContainer.Resolve<IBus>();
+            bus.publish(message);
+        }
+
+
     }
 }

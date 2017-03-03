@@ -1,0 +1,121 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<logicalClassDesignerModel xmlns:dm0="http://schemas.microsoft.com/VisualStudio/2008/DslTools/Core" xmlns:dm1="http://schemas.microsoft.com/dsltools/Kernel" xmlns:dm2="http://schemas.microsoft.com/dsltools/Component" xmlns:dm3="http://schemas.microsoft.com/dsltools/Activity" xmlns:dm4="http://schemas.microsoft.com/dsltools/UseCase" xmlns:dm5="http://schemas.microsoft.com/dsltools/Interaction" xmlns:dm6="http://schemas.microsoft.com/dsltools/UmlModelLibrary" xmlns:dm7="http://schemas.microsoft.com/dsltools/UmlDiagrams" xmlns:dm8="http://schemas.microsoft.com/dsltools/ModelStore" dslVersion="1.0.0.0" Id="3d16dd7b-2173-4f84-a4d9-36a0d2d8ac75" name="UMLClassDiagram1" linkedPackageId="f89cfd89-fb0b-4b09-bf1d-8a7c10af6d8f" xmlns="http://schemas.microsoft.com/dsltools/LogicalClassDesigner">
+  <profileInstances>
+    <packageHasProfileInstances Id="8e5b8f5a-99a8-4b95-99bb-f73720b66cc7">
+      <profileInstance Id="7ef54f1a-ddde-4d0a-af24-251fc7c96574" name="StandardProfileL2">
+        <elementDefinition Id="e34d544e-0fea-4ed6-ac5e-1b74119ac791" />
+      </profileInstance>
+      <elementDefinition Id="0caec977-1f8c-4ba3-a7db-8cc9ad9cc73b" />
+    </packageHasProfileInstances>
+    <packageHasProfileInstances Id="0c37c22b-2c15-433c-8c59-f81fb6367704">
+      <profileInstance Id="e8459c0d-c554-48ec-a70e-5114bfb2d3a5" name="StandardProfileL3">
+        <elementDefinition Id="532ea607-fb19-44b8-8502-3351b05452be" />
+      </profileInstance>
+      <elementDefinition Id="29349502-908c-4fda-9054-c48619c59ed0" />
+    </packageHasProfileInstances>
+  </profileInstances>
+  <packagedElements>
+    <logicalClassDesignerModelHasTypes>
+      <Interface Id="75626261-c171-4f1d-8aef-18a27da3c153" name="IMessage" isAbstract="false" isLeaf="false">
+        <elementDefinition Id="141a52d6-c384-47d4-8603-c280e92c1fa9" />
+      </Interface>
+    </logicalClassDesignerModelHasTypes>
+    <logicalClassDesignerModelHasTypes>
+      <Interface Id="f92e63b7-b8a2-40f7-af5f-a9b48b56c99f" name="IHandler" isAbstract="false" isLeaf="false">
+        <elementDefinition Id="a2f2fa81-dda4-4384-9fd3-72d2a97a4168" />
+        <ownedRedefinableTemplateSignatureInternal>
+          <redefinableTemplateSignature Id="ab448431-b499-4401-b959-b23d8a727ec0" parameters="" isLeaf="false">
+            <elementDefinition Id="c71844ce-0ef1-4e87-8999-f643b82f72f7" />
+            <ownedParameters>
+              <classifierTemplateParameter Id="8d8d1de5-8bc3-44e6-9484-75da339af27a">
+                <elementDefinition Id="d23a4b2a-5236-4c31-ae2f-5b5ba89ce394" />
+                <ownedParameterableElement>
+                  <class Id="f3498227-20a9-40a2-8ce3-d70395b40abe" name="T" isAbstract="false" isLeaf="false" isActiveClass="false">
+                    <elementDefinition Id="7f4e0165-978d-423b-8611-7407dfe8be15" />
+                  </class>
+                </ownedParameterableElement>
+                <constrainingClassifier>
+                  <referencedTypeMoniker Id="c944d1ce-6573-4a96-aa73-20e368292113" LastKnownName="IMessage" />
+                </constrainingClassifier>
+              </classifierTemplateParameter>
+            </ownedParameters>
+          </redefinableTemplateSignature>
+        </ownedRedefinableTemplateSignatureInternal>
+      </Interface>
+    </logicalClassDesignerModelHasTypes>
+    <packageHasNamedElement>
+      <referencedType Id="c944d1ce-6573-4a96-aa73-20e368292113" name="IMessage" isAbstract="false" isLeaf="false" cachedFullName="ModelingProject.ActorLite::IMessage">
+        <elementDefinition Id="141a52d6-c384-47d4-8603-c280e92c1fa9" />
+      </referencedType>
+    </packageHasNamedElement>
+    <logicalClassDesignerModelHasTypes>
+      <Interface Id="81934ff3-9b99-494e-a960-cb99c7b75e8c" name="IActor" visibility="Package" isAbstract="false" isLeaf="false">
+        <elementDefinition Id="de92dcdf-9493-42d9-9c31-51d069466014" />
+        <ownedAttributes>
+          <property Id="9c858b93-5c11-47ea-896d-3be7a66274d0" name="Exited" isLeaf="false" isStatic="false" isReadOnly="true" isUnique="false" isDerived="false" isDerivedUnion="false" aggregation="None" isComposite="false">
+            <elementDefinition Id="6f2d98f9-aa9d-42d4-90ac-3f4a98b89a83" />
+            <type_NamedElement>
+              <referencedTypeMoniker Id="baba8ea2-05d7-4500-8485-408de2581645" LastKnownName="Boolean" />
+            </type_NamedElement>
+          </property>
+          <property Id="1a6f49e4-73bd-4ae1-8488-de89cd44a35a" name="MessageCount" isLeaf="false" isStatic="false" isReadOnly="true" isUnique="false" isDerived="false" isDerivedUnion="false" aggregation="None" isComposite="false">
+            <elementDefinition Id="c671c222-93c5-4360-b479-5576be466c46" />
+            <type_NamedElement>
+              <referencedTypeMoniker Id="1e62b566-6792-4b63-8f46-a77f74704e74" LastKnownName="Integer" />
+            </type_NamedElement>
+          </property>
+          <property Id="e159b6b9-9b28-46d7-8a0e-d8dad5941f6b" name="Context" isLeaf="false" isStatic="false" isReadOnly="true" isUnique="false" isDerived="false" isDerivedUnion="false" aggregation="None" isComposite="false">
+            <elementDefinition Id="ed160982-c613-4a65-8d41-ac5488cc8ed4" />
+            <type_NamedElement>
+              <referencedTypeMoniker Id="4b7ba3e5-4bf6-4551-aa33-4033dd2d7f20" LastKnownName="ActorContext" />
+            </type_NamedElement>
+          </property>
+        </ownedAttributes>
+        <ownedOperations>
+          <operation Id="d3b0ec5c-3feb-4ee3-a074-848154ea97c9" name="Execute" isLeaf="false" isStatic="false" isAbstract="true" concurrency="Sequential" isQuery="false">
+            <elementDefinition Id="a1172bf8-9edd-4eca-acab-f114b59de06e" />
+          </operation>
+        </ownedOperations>
+      </Interface>
+    </logicalClassDesignerModelHasTypes>
+    <logicalClassDesignerModelHasTypes>
+      <class Id="571fd61e-e1af-4ec9-8b9f-f71b9ee664dd" name="ActorContext" isAbstract="false" isLeaf="false" isActiveClass="false">
+        <elementDefinition Id="767d3d29-b4e5-48bc-a1ea-b4a8061b4f7d" />
+        <ownedAttributesInternal>
+          <property Id="98239812-d86b-4c18-9084-b9ec49a65a9a" name="Actor" isLeaf="false" isStatic="false" isReadOnly="false" isUnique="false" isDerived="false" isDerivedUnion="false" aggregation="None" isComposite="false">
+            <elementDefinition Id="bf81ab1c-b748-46d4-9a6d-44fc8388ac41" />
+            <type_NamedElement>
+              <referencedTypeMoniker Id="5b1f2fc7-2c56-4b4a-b0d4-a1871663a399" LastKnownName="IActor" />
+            </type_NamedElement>
+          </property>
+          <property Id="ab64f6e0-dd99-4439-a831-768cb097676b" name="Status" isLeaf="false" isStatic="false" isReadOnly="false" isUnique="false" isDerived="false" isDerivedUnion="false" aggregation="None" isComposite="false">
+            <elementDefinition Id="14c6c88a-8284-493d-a272-e2f367eebd80" />
+          </property>
+        </ownedAttributesInternal>
+      </class>
+    </logicalClassDesignerModelHasTypes>
+    <packageHasNamedElement>
+      <referencedType Id="5b1f2fc7-2c56-4b4a-b0d4-a1871663a399" name="IActor" isAbstract="false" isLeaf="false" cachedFullName="ModelingProject.ActorLite::IActor">
+        <elementDefinition Id="de92dcdf-9493-42d9-9c31-51d069466014" />
+      </referencedType>
+    </packageHasNamedElement>
+    <packageHasNamedElement>
+      <referencedType Id="4b7ba3e5-4bf6-4551-aa33-4033dd2d7f20" name="ActorContext" isAbstract="false" isLeaf="false" cachedFullName="ModelingProject.ActorLite::ActorContext">
+        <elementDefinition Id="767d3d29-b4e5-48bc-a1ea-b4a8061b4f7d" />
+      </referencedType>
+    </packageHasNamedElement>
+    <packageHasNamedElement>
+      <referencedType Id="baba8ea2-05d7-4500-8485-408de2581645" name="Boolean" isAbstract="false" isLeaf="false" cachedFullName="Boolean">
+        <elementDefinition Id="8943dc84-709e-4f62-b15a-a3273aa6f165" />
+      </referencedType>
+    </packageHasNamedElement>
+    <packageHasNamedElement>
+      <referencedType Id="1e62b566-6792-4b63-8f46-a77f74704e74" name="Integer" isAbstract="false" isLeaf="false" cachedFullName="Integer">
+        <elementDefinition Id="220a3521-e091-4221-bae9-3ef9018e845c" />
+      </referencedType>
+    </packageHasNamedElement>
+  </packagedElements>
+  <package Id="f89cfd89-fb0b-4b09-bf1d-8a7c10af6d8f" name="ModelingProject.ActorLite">
+    <elementDefinition Id="e2811511-977f-40ff-b1fc-4a13180ac48e" />
+  </package>
+</logicalClassDesignerModel>
