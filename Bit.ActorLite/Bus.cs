@@ -30,7 +30,7 @@ namespace Bit.ActorLite
                 _route.TryAdd(typeof(T), handlers);
             }
 
-            handlers.Add(h => handler((T)h));
+            handlers.Add(x => handler((T)x));
         }
     }
 }
